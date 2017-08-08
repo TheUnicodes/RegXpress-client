@@ -1,4 +1,4 @@
-const socket = io.connect('http://localhost:3000', {
+const socket = io.connect('https://regxpress.herokuapp.com', {
   reconnect:false
 });
 // const socket = io.connect('https://regxpress.herokuapp.com');
