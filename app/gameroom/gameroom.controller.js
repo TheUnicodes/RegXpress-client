@@ -17,6 +17,7 @@
     vm.messageInfo = undefined;
     vm.playerMessage = {};
     vm.showPlayer = {};
+    vm.errorMessage = "";
 
     vm.inputText = "";
 
@@ -118,6 +119,10 @@
       // if ( == vm.inputText vm.serverService.questions[vm.questionIndex].answer || vm.inputText == "pass") {
       if (vm.inputText == vm.serverService.questions[vm.questionIndex].answer || vm.inputText == "pass") {
 
+
+        vm.errorMessage = "";
+
+
         console.log("You solved the regex")
 
         // if (vm.questionIndex == vm.serverService.getQuestions().length - 1) {
@@ -156,6 +161,8 @@
           });
         }
 
+      } else {
+        vm.errorMessage = "Wrong answer";
       }
 
       vm.inputText = "";

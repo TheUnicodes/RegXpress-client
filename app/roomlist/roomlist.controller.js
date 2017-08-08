@@ -16,6 +16,10 @@
     vm.roomsUsers = {};
 
 
+    vm.turnOffServer = function() {
+        socket.emit("close server");
+    }
+
     vm.changeState = function() {
       $state.go('gameroom');
     }
