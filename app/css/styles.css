@@ -19,7 +19,7 @@ html, body {
 }
 
 .btn-blue {
-  background: #6699FF;
+  background: #5D737E;
   color:#EEEEEE;
   margin: 1vw auto;
   text-align: center;
@@ -27,7 +27,8 @@ html, body {
   /*box-shadow: 1px 1px 1px darkgrey;*/
 }
 .btn-blue:hover {
-  background: #496cb2;
+  background: #415159;
+  color:#EEEEEE;
 }
 
 .rooms {
