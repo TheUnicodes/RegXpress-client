@@ -16,6 +16,11 @@
     vm.back = ngAudio.load("app/sounds/back.wav");
     vm.join = ngAudio.load("app/sounds/laser2.wav")
 
+    vm.username = "";
+
+    vm.showLoading = true;
+
+
 
     vm.turnOffServer = function() {
         socket.emit("close server");
@@ -35,6 +40,7 @@
         .then(results => {
           // console.log(results);
           vm.rooms = results.data
+          vm.showLoading = false;
           socket.emit("get updates", info);
 
         })
@@ -74,6 +80,8 @@
     }
 
     vm.joinRoom = function(room) {
+
+      if(vm.username.length > 0) {
 
       var roomObj = {
         name: room.name,
@@ -205,6 +213,10 @@
         });
 
       });
+
+    } else {
+      console.log("Enter your username");
+    }
     }
 
     getUsers = function() {
