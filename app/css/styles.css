@@ -64,6 +64,12 @@ a {
   text-decoration: none;
 }
 
+.roomContainer {
+  border:solid 0px #333333;
+  width:45vw;
+  margin:1vw auto;
+}
+
 /*.landingPageHeader {
   font-family: 'Raleway', sans-serif;
   color: #E8F7EE;
@@ -75,6 +81,7 @@ a {
 /*
     Game Room
   */
+
 
 .gameroomHeader {
   font-family: 'Work Sans', sans-serif;
@@ -111,4 +118,11 @@ a {
 
 .user-display {
   background-color: black;
+}
+
+@media screen and (max-width: 700px) {
+  .roomContainer {
+    width:95vw;
+    margin:1vw auto;
+  }
 }
