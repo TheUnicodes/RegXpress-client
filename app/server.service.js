@@ -5,6 +5,7 @@ const socket = io.connect('https://regxpress.herokuapp.com');
 
 
 
+
 (function() {
 
   angular

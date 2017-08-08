@@ -26,12 +26,16 @@
     vm.userStatus = {};
 
     vm.pass = ngAudio.load("app/sounds/coin.wav");
+    vm.fail = ngAudio.load("app/sounds/fail3.wav");
+    vm.game = ngAudio.load("app/sounds/game.wav")
 
 
 
     vm.flag = false;
 
     vm.$onInit = function() {
+
+      vm.game.play()
 
       $http.get(questionsURL)
         .then(results => {
@@ -167,6 +171,7 @@
 
       } else {
         vm.errorMessage = "Wrong answer";
+        vm.fail.play()
       }
 
       vm.inputText = "";

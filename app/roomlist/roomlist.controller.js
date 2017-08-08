@@ -14,9 +14,12 @@
     vm.numPlayers = 0;
     vm.roomsUsers = {};
     vm.back = ngAudio.load("app/sounds/back.wav");
+    vm.join = ngAudio.load("app/sounds/laser2.wav")
+
     vm.username = "";
 
     vm.showLoading = true;
+
 
 
     vm.turnOffServer = function() {
@@ -92,7 +95,7 @@
         room: roomObj
       }
 
-
+      vm.join.play()
       vm.serverService.room = roomObj;
 
       socket.emit("room", info);
