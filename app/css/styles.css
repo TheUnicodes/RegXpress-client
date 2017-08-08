@@ -120,7 +120,7 @@ a {
   background-color: black;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 799px) {
   .roomContainer {
     width:95vw;
     margin:1vw auto;
