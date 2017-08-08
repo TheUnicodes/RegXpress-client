@@ -16,6 +16,10 @@
     vm.back = ngAudio.load("app/sounds/back.wav");
 
 
+    vm.turnOffServer = function() {
+        socket.emit("close server");
+    }
+
     vm.changeState = function() {
       $state.go('gameroom');
     }
