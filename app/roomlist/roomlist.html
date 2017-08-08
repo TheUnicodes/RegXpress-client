@@ -14,6 +14,7 @@
   <p style = "color:#FFFFFF; text-align:center; margin: 1vw auto;" ng-show = "$ctrl.showLoading">Getting rooms list</p>
 
   <input id="first" ng-model="$ctrl.username" ng-hide = "$ctrl.showLoading" style = "width:40%; margin: 1vw auto;" placeholder="Enter your username..." class="form-control" autocomplete = "off" ng-required>
+  <p style = "color:#FF8899;text-align:center;">{{$ctrl.usernameError}}</p>
 
 
   <p style = "color:#AAAAAA;">{{$ctrl.serverService.message}}</p>
