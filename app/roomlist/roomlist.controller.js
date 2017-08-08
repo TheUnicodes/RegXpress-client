@@ -15,6 +15,8 @@
     vm.roomsUsers = {};
     vm.back = ngAudio.load("app/sounds/back.wav");
 
+    vm.showLoading = true;
+
 
     vm.turnOffServer = function() {
         socket.emit("close server");
@@ -34,6 +36,7 @@
         .then(results => {
           // console.log(results);
           vm.rooms = results.data
+          vm.showLoading = false;
           socket.emit("get updates", info);
 
         })
