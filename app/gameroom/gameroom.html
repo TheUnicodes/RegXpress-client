@@ -1,0 +1,94 @@
+<!-- <div class="page-header">
+  <h3 class="gameroomHeader">Welcome to Game Room Whatever <small>Subtext for header</small></h3>
+</div>
+ -->
+
+<div class = "container margined">
+
+<small style = "color:#EEEEEE;">{{$ctrl.serverService.message}}</small>
+
+<h3 style="color:#DDDDDD;">You: {{$ctrl.serverService.userName}}</h3>
+
+<div class="questionBox well">
+  <!-- <p>If a programmer wants to create at least 1 function flollowed by zero or three arrays; what is the reqular expression behind this pattern?</p> -->
+  <!-- <p>{{$ctrl.serverService.getQuestions()[$ctrl.questionIndex].question}}</p> -->
+  <p class="questions">{{$ctrl.serverService.questions[$ctrl.questionIndex].question}}</p>
+
+
+
+  <br>
+
+  <input class="form-control" ng-model="$ctrl.inputText" type="text" ng-keyup="$ctrl.onKeyup($event, txt, $ctrl.serverService.userName)" placeholder="Example: [a-z]*abc">
+  <br>
+  <button type="button" ng-click = "$ctrl.submitAnswer($ctrl.serverService.userName)" class="btn btn-info" name="button">Submit</button>
+
+</div>
+
+
+<!-- <div class="" ng-repeat = "player in $ctrl.serverService.getUsers()"> -->
+
+<!-- <div class="well" id = "player"> -->
+<!-- <strong>Player:<p>{{player.name}}</p></strong> -->
+<!-- <strong>Typing:<p>...</p></strong> -->
+
+<!-- <div> -->
+<!-- <div style = "margin:1vw auto; width:50vw; height:300px; border:solid 1px #333333; color:#EEEEEE;"> -->
+
+
+  <div ng-repeat = "player in $ctrl.serverService.getUsers()">
+
+    <p style = "color:#EEEEEE;" ng-hide = "$ctrl.serverService.hideUser[player.name]">{{player.name}}</p>
+
+    <!-- <p style = "color:#EEEEEE; margin:1vw;">  {{$ctrl.messageInfo.user}} </p> -->
+    <p style = "color:#EEEEEE; margin:1vw;"> {{$ctrl.playerMessage[player.name]}}</p>
+
+    <p style = "color:#EEEEEE">{{$ctrl.userStatus[player.name]}}</p>
+
+
+    <div class="separator" ng-hide = "$ctrl.serverService.hideUser[player.name]"></div>
+
+  </div>
+
+<!-- </div> -->
+
+
+<!-- <input type="text" ng-keyup = "$ctrl.onKeyup($event)" placeholder=""> -->
+<!-- Keycode: {{event.keyCode}} -->
+
+</div>
+
+</div>
+
+<!-- <h1 style = "color:white;">{{player.name}}</h1> -->
+
+<!-- </div> -->
+
+<!-- <h2 ng-model = "$ctrl.serverService.message" style = "color:white;"></h2> -->
+
+
+<!-- <div class="col-xs-4"
+  ng-repeat="rooms in $ctrl.users">
+  <div class="well players">
+    <h5>Username:</h5>
+    <h5>Answer:</h5>
+    <h4>Score:</h4>
+  </div>
+</div> -->
+
+
+
+
+<!-- <div class="container user-area">
+  <div class="well user-display">
+    <h4 class="questions">
+    Question : {{question.question}}
+  </h4>
+    <form class="form-inline">
+      <input type="text" />
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+    <p class="answers">
+      <small><em>answer : {{question.answer}}</em></small>
+    </p>
+  </div>
+</div> -->
