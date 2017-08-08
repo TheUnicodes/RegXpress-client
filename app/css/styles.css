@@ -120,6 +120,12 @@ a {
   background-color: black;
 }
 
+.congratsHeader {
+  font-family: 'Work Sans', sans-serif;
+  color: #E8F7EE;
+  text-align: center;
+}
+
 @media screen and (max-width: 799px) {
   .roomContainer {
     width:95vw;
