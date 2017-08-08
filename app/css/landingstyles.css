@@ -4,8 +4,8 @@
 }
 
 .helpButton {
-  margin-top: 40px;
-  margin-left: 75%;
+  border: black;
+  margin-left: auto;
   color: black;
   background-color: #6A8D92;
 }
@@ -30,6 +30,11 @@
 .roomsButton {
   animation-duration: 0.5s;
   animation-name: slidein;
+}
+
+.backArrow {
+  font-size: 28px;
+   color: #2C497F;
 }
 
 
@@ -98,10 +103,10 @@
   color: black;
   font-family: 'Roboto', sans-serif;
   border: 1px solid black;
-  padding: 5px 10px 0px 10px;
+  padding: 0px 10px 5px 10px;
   border-radius: 6px;
   cursor: pointer;
-  animation: fade 9s;
+  animation: fade 6s;
   background-color: #5D737E;
 }
 
@@ -220,4 +225,10 @@ body {
 .game-info:hover p {
   transform: translateY(0px);
   transition-delay: 0.4s;
+}
+
+@media screen and (max-width: 850px) {
+  .game {
+    display: none;
+  }
 }
