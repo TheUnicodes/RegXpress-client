@@ -10,7 +10,7 @@
 
 
   // function gameRoomController($stateParams, $http) {
-  function gameRoomController(ServerService, $scope, $http, $state) {
+  function gameRoomController(ServerService, $scope, $http, $state, ngAudio) {
 
     const vm = this;
     vm.serverService = ServerService;
@@ -23,6 +23,8 @@
     vm.questionIndex = 0;
 
     vm.userStatus = {};
+
+    vm.pass = ngAudio.load("app/sounds/coin.wav");
 
 
 
@@ -119,6 +121,8 @@
       if (vm.inputText == vm.serverService.questions[vm.questionIndex].answer || vm.inputText == "pass") {
 
         console.log("You solved the regex")
+
+        vm.pass.play()
 
         // if (vm.questionIndex == vm.serverService.getQuestions().length - 1) {
         if (vm.questionIndex == vm.serverService.questions.length - 1) {
