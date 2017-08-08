@@ -231,4 +231,8 @@ body {
   .game {
     display: none;
   }
+  .roomContainer {
+    width:95vw;
+    margin:1vw auto;
+  }
 }
