@@ -28,7 +28,7 @@
 }
 
 .roomsButton {
-  animation-duration: 3s;
+  animation-duration: 0.5s;
   animation-name: slidein;
 }
 
