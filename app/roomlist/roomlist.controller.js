@@ -6,18 +6,22 @@
   const roomsURL = 'https://regxpress.herokuapp.com/rooms'
   // const socket = io.connect('http://localhost:3000');
 
-  function RoomListController($http, $state, ServerService, $scope) {
+  function RoomListController($http, $state, ServerService, $scope, ngAudio) {
     const vm = this
     vm.users = [];
     vm.message = "";
     vm.serverService = ServerService;
     vm.numPlayers = 0;
-
     vm.roomsUsers = {};
+    vm.back = ngAudio.load("app/sounds/back.wav");
 
 
     vm.changeState = function() {
       $state.go('gameroom');
+    }
+
+    vm.backUp = function () {
+      vm.back.play()
     }
 
     vm.$onInit = function() {
