@@ -14,6 +14,7 @@
     vm.numPlayers = 0;
     vm.roomsUsers = {};
     vm.back = ngAudio.load("app/sounds/back.wav");
+    vm.username = "";
 
     vm.showLoading = true;
 
@@ -76,6 +77,8 @@
     }
 
     vm.joinRoom = function(room) {
+
+      if(vm.username.length > 0) {
 
       var roomObj = {
         name: room.name,
@@ -207,6 +210,10 @@
         });
 
       });
+
+    } else {
+      console.log("Enter your username");
+    }
     }
 
     getUsers = function() {
