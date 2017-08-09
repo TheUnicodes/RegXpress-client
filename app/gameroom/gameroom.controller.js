@@ -27,7 +27,7 @@
 
     vm.pass = ngAudio.load("app/sounds/coin.wav");
     vm.fail = ngAudio.load("app/sounds/fail3.wav");
-    vm.game = ngAudio.load("app/sounds/game.wav")
+    vm.game = ngAudio.load("app/sounds/room.wav")
 
 
 
