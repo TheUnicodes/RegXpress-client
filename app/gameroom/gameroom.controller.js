@@ -27,15 +27,15 @@
 
     vm.pass = ngAudio.load("app/sounds/coin.wav");
     vm.fail = ngAudio.load("app/sounds/fail3.wav");
-    vm.background = ngAudio.load("app/sounds/slowmusic.mp3")
-    vm.background.loop = true;
+    // vm.background = ngAudio.load("app/sounds/slowmusic.mp3")
+    // vm.background.loop = true;
 
 
     vm.flag = false;
 
     vm.$onInit = function() {
 
-      vm.background.play()
+      // vm.background.play()
 
       $http.get(questionsURL)
         .then(results => {
@@ -119,7 +119,7 @@
 
     vm.submitAnswer = function(username) {
 
-      vm.background.play()
+      // vm.background.play()
 
       console.log("INPUT TEXT -------- ", vm.inputText);
 
