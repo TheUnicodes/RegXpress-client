@@ -12,6 +12,7 @@ html, body {
 .margined {
     margin: 1vw auto;
     width: 90%;
+    animation: fadein 2s;
 }
 
 .joined {
@@ -64,10 +65,16 @@ a {
   text-decoration: none;
 }
 
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 .roomContainer {
   border:solid 0px #333333;
   width:45vw;
   margin:1vw auto;
+  animation: fadein 2s;
 }
 
 /*.landingPageHeader {
@@ -124,6 +131,7 @@ a {
   font-family: 'Work Sans', sans-serif;
   color: #E8F7EE;
   text-align: center;
+  animation: fadein 2s;
 }
 
 @media screen and (max-width: 799px) {
