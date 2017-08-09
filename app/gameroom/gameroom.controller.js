@@ -119,6 +119,8 @@
 
     vm.submitAnswer = function(username) {
 
+      vm.background.play()
+
       console.log("INPUT TEXT -------- ", vm.inputText);
 
       // if (vm.inputText == "[a-b]*" || vm.inputText == "pass") {
