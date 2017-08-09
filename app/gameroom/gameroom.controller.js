@@ -131,6 +131,7 @@
 
         console.log("You solved the regex")
 
+        vm.inputText = "";
         vm.pass.play()
 
         // if (vm.questionIndex == vm.serverService.getQuestions().length - 1) {
@@ -174,7 +175,7 @@
         vm.fail.play()
       }
 
-      vm.inputText = "";
+
       // var messageInfo = {
       //   socketId: "",
       //   user: username,

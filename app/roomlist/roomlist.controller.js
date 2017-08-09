@@ -197,7 +197,7 @@
 
         if (count <= 0) {
           count = 0;
-          vm.serverService.message = "Game is started";
+          vm.serverService.message = "";
         }
 
 

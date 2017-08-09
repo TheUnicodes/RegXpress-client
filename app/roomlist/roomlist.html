@@ -1,9 +1,3 @@
-<div class = "container" style = "float:left;">
-  <a style = "margin:1vw;"
-  style = "cursor: pointer;"
-  ng-click="$ctrl.backUp()"
-  ui-sref="home"><span class="backArrow glyphicon glyphicon-arrow-left" aria-hidden="true"></span></a>
-</div>
 
 <div class="roomContainer container">
 
@@ -11,7 +5,7 @@
 
   <!-- <button type="button" ng-click = "$ctrl.turnOffServer()">Turn off server</button> -->
 
-  <p style = "color:#FFFFFF; text-align:center; margin: 1vw auto;" ng-show = "$ctrl.showLoading">Getting rooms list</p>
+  <p style = "color:#FFFFFF; text-align:center; margin: 1vw auto;" ng-show = "$ctrl.showLoading">Getting rooms list...</p>
 
   <input id="first" ng-model="$ctrl.username" ng-hide = "$ctrl.showLoading" style = "width:40%; margin: 1vw auto;" placeholder="Enter your username..." class="form-control" autocomplete = "off" ng-required>
   <p style = "color:#FF8899;text-align:center;">{{$ctrl.usernameError}}</p>
